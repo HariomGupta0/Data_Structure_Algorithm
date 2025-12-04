@@ -11,7 +11,6 @@ int main() {
       }
     }
     
-    function 
   	cout << max ;
     return 0;
 }
