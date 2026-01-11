@@ -24,6 +24,8 @@ int main() {
     // Create an array
     vector<int> arr = {2, 5, 8, 7};
 
+    //Two ways to create node 
+    //1)
     // Create first node
     //  Node* y = new Node(arr[0]);
 
@@ -35,6 +37,7 @@ int main() {
     //     y = y->next;
     // }
 
+    //2nd
     Node* third  = new Node(arr[3], nullptr);   // 7
     Node* second = new Node(arr[2], third);     // 8 -> 7
     Node* first  = new Node(arr[1], second);    // 5 -> 8 -> 7

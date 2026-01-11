@@ -25,23 +25,20 @@ class Solution {
     }
 
     //If their is 1 or 2 node
-    Node* deletthenode(Node* head) {
-        if (head == NULL || head->next == NULL)  {
+    Node* DeleteTheNode(Node* head) {
+        if( head == NULL || head->next == NULL) {
             delete head;
+
             return NULL;
         }
 
-        // Traversing through the second last
         Node* curr = head;
-        while (curr->next->next != NULL) {
+        while(curr->next->next != NULL) {
             curr = curr->next;
-    }
+        }
 
-        delete curr->next;
-        curr->next = nullptr;
-
+        curr->next = curr->next->next;
         return head;
-
     }
 
 
@@ -72,7 +69,7 @@ int main() {
     cout << "Oldnode ";
     sol.printList(y);
     
-    sol.deletthenode(y);
+    sol.DeleteTheNode(y);
     // head = sol.insertathead(head,5);
     cout << "After deleting the tail ";
     sol.printList(y);
