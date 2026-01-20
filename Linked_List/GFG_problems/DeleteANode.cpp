@@ -21,7 +21,7 @@ void printList(Node* head) {
 void deleteByValue(Node* head, int key) {
     if(head == nullptr) return;
 
-    if (head-> data == key && head =head->next ) {
+    if (head->data == key && head == head->next ) {
         Node* temp = head;
         head = head->next;
         delete temp;
